@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "$(yarn bin prettier) --write ."
+    "format": "$(yarn bin prettier) --write .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@ledgerhq/react-ui": "^0.14.9",
