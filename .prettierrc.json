@@ -1,0 +1,21 @@
+{
+  "semi": false,
+  "singleQuote": false,
+  "printWidth": 100,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css"
+      }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "tabWidth": 1
+      }
+    }
+  ]
+}
