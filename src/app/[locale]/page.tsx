@@ -3,15 +3,23 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ThemeSelector from "@/components/ThemeSelector";
 import { Storetester } from "@/components/StoreTester-to-remove";
+import { getCurrentLocale, getI18n } from "@/i18n/server";
+import LocaleSelector from "@/components/LocaleSelector";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getI18n();
+  const locale = getCurrentLocale();
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          {t("hello")}, get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
+
+        <p>{locale}</p>
+
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -33,6 +41,7 @@ export default function Home() {
 
       <ThemeSelector />
       <Storetester />
+      <LocaleSelector />
 
       <div className={styles.center}>
         <Image

@@ -5173,6 +5173,10 @@ is-arguments@^1.0.4, is-arguments@^1.1.1:
   dependencies:
     call-bind "^1.0.2"
     has-tostringtag "^1.0.0"
+international-types@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/international-types/-/international-types-0.8.0.tgz#a3d027ad59d8de9b53fa8c448f8fe9b1bc558097"
+  integrity sha512-cJwagIBzMG0FTK81TABeSBU0eReIXWmvW18m/URn8ZA+GLoWIcdL43kfjArwHVmZJ1n+IFchsBj8tQLYUqmwnA==
 
 is-array-buffer@^3.0.1, is-array-buffer@^3.0.2:
   version "3.0.2"
@@ -6300,12 +6304,23 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+<<<<<<< HEAD
 new-date@^1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/new-date/-/new-date-1.0.3.tgz#a5956086d3f5ed43d0b210d87a10219ccb7a2326"
   integrity sha512-0fsVvQPbo2I18DT2zVHpezmeeNYV2JaJSrseiHLc17GNOxJzUdx5mvSigPu8LtIfZSij5i1wXnXFspEs2CD6hA==
   dependencies:
     "@segment/isodate" "1.0.3"
+=======
+next-international@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/next-international/-/next-international-1.0.0.tgz#fb0a1ddeb066c789bf43ae949315489e02b07883"
+  integrity sha512-hrPZyxvOzDRBpwHA+hp6Rluocy8lktuK88a/pEmafOUc0IAg6JNjjTW/6twHdfS7eAYWHfW5TKapJEOaXqqp8w==
+  dependencies:
+    client-only "^0.0.1"
+    international-types "^0.8.0"
+    server-only "^0.0.1"
+>>>>>>> c38d918 (Initilization of i18n)
 
 next@13.4.19:
   version "13.4.19"
@@ -7087,6 +7102,10 @@ shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
+server-only@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/server-only/-/server-only-0.0.1.tgz#0f366bb6afb618c37c9255a314535dc412cd1c9e"
+  integrity sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==
 
 shebang-command@^2.0.0:
   version "2.0.0"
