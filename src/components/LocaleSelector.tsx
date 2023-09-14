@@ -9,7 +9,7 @@ const LocaleSelector = () => {
   return (
     <>
       <button onClick={() => (locale === "en" ? changeLocale("fr") : changeLocale("en"))}>
-        Click me to change locale
+        Click me to change the current locale to: {locale === "en" ? "fr" : "en"}
       </button>
     </>
   );
