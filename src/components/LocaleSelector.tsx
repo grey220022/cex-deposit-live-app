@@ -1,14 +1,6 @@
 "use client";
 
-import { I18nProviderClient, useI18n } from "@/i18n/client";
-
-const Wrapper = () => {
-  return (
-    <I18nProviderClient>
-      <LocaleSelector />
-    </I18nProviderClient>
-  );
-};
+import { withI18n, useI18n } from "@/i18n/client";
 
 const LocaleSelector = () => {
   const { locale, changeLocale, t } = useI18n();
@@ -23,4 +15,4 @@ const LocaleSelector = () => {
   );
 };
 
-export default Wrapper;
+export default withI18n(LocaleSelector);
