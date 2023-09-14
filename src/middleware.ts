@@ -1,9 +1,10 @@
 import { createI18nMiddleware } from "next-international/middleware";
 import { NextRequest } from "next/server";
+import { DEFAULT_LOCALE, LOCALES } from "./i18n";
 
 const I18nMiddleware = createI18nMiddleware({
-  locales: ["en", "fr"],
-  defaultLocale: "en",
+  locales: LOCALES,
+  defaultLocale: DEFAULT_LOCALE.id,
   urlMappingStrategy: "rewrite",
 });
 

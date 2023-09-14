@@ -1,18 +1,26 @@
 "use client";
 
-import { useChangeLocale, useCurrentLocale } from "@/i18n/client";
+import { I18nProviderClient, useI18n } from "@/i18n/client";
+
+const Wrapper = () => {
+  return (
+    <I18nProviderClient>
+      <LocaleSelector />
+    </I18nProviderClient>
+  );
+};
 
 const LocaleSelector = () => {
-  const changeLocale = useChangeLocale();
-  const locale = useCurrentLocale();
+  const { locale, changeLocale, t } = useI18n();
 
   return (
     <>
       <button onClick={() => (locale === "en" ? changeLocale("fr") : changeLocale("en"))}>
         Click me to change the current locale to: {locale === "en" ? "fr" : "en"}
+        <div>{t("welcome")}</div>
       </button>
     </>
   );
 };
 
-export default LocaleSelector;
+export default Wrapper;

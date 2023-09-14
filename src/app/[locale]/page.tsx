@@ -3,12 +3,11 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ThemeSelector from "@/components/ThemeSelector";
 import { Storetester } from "@/components/StoreTester-to-remove";
-import { getCurrentLocale, getI18n } from "@/i18n/server";
 import LocaleSelector from "@/components/LocaleSelector";
+import { useI18n } from "@/i18n/server";
 
 export default async function Home() {
-  const t = await getI18n();
-  const locale = getCurrentLocale();
+  const { t, locale } = await useI18n();
 
   return (
     <main className={styles.main}>
