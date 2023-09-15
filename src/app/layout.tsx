@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import TransportProvider from "../components/TransportProvider";
+import TransportProvider from "@/components/TransportProvider";
+import { StyleProvider } from "@/styles/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,9 @@ export default function RootLayout({ children }: { children: React.ReactElement 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <TransportProvider>{children}</TransportProvider>
+        <TransportProvider>
+          <StyleProvider>{children}</StyleProvider>
+        </TransportProvider>
       </body>
     </html>
   );

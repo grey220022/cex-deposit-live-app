@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/src/*": ["./src/*"],
+      "@/app/*": ["./src/app/*"],
+      "@/i18n/*": ["./src/i18n/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/styles/*": ["./src/styles/*"],
+
       "@/tools/*": ["./tools/*"],
       "@/TestTools": ["./tools/test.tools.tsx"]
     }
