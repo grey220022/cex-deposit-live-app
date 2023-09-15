@@ -10,11 +10,11 @@ const I18nClient = createI18nClient(LocalesI18nConfig);
  * Component wrapper for client components that needs i18n.
  */
 export const withI18n = (Component: () => JSX.Element) => {
-  return () => (
+  return function () {
     <I18nClient.I18nProviderClient>
       <Component />
-    </I18nClient.I18nProviderClient>
-  );
+    </I18nClient.I18nProviderClient>;
+  };
 };
 
 /**

@@ -18,7 +18,7 @@ export type LocaleDefinition = {
   label: string;
 
   // File
-  file: any;
+  file: Function;
 };
 
 /**
