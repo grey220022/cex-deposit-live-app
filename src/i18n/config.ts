@@ -9,6 +9,11 @@ export const LOCALES = ["en", "fr"] as const;
 export type Locale = (typeof LOCALES)[number];
 
 /**
+ * This is the File type.
+ */
+export type File = () => Promise<unknown>;
+
+/**
  * This is the Locale definition type.
  */
 export type LocaleDefinition = {
@@ -18,7 +23,7 @@ export type LocaleDefinition = {
   label: string;
 
   // File
-  file: Function;
+  file: File;
 };
 
 /**
@@ -43,7 +48,7 @@ export const Locales = {
 export const LocalesI18nConfig = {
   en: () => Locales.en.file(),
   fr: () => Locales.fr.file(),
-} as const satisfies LocaleMap<() => Promise<{}>>;
+} as const satisfies LocaleMap<File>;
 
 /**
  * The default locale.
