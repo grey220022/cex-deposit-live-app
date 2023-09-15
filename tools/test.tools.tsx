@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import { render, RenderOptions } from "@testing-library/react";
-import { StyleProvider } from "@ledgerhq/react-ui";
 import userEvent from "@testing-library/user-event";
+import { StyleProvider } from "@/styles/provider";
 
 type PropsTheme = {
   children: React.ReactNode;
