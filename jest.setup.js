@@ -26,6 +26,15 @@ beforeEach(() => {
   mockUseWalletInfo.mockReturnValue(mockUseWalletInfoData);
   mockUseUserId.mockReturnValue(mockUseUserIdData);
 });
+jest.mock("next/router", () => require("next-router-mock"));
+
+jest.mock("next-international", () => ({}));
+jest.mock("next-international/server", () => ({
+  createI18nServer: () => ({
+    getI18n: () => Promise.resolve(() => ({ t: () => jest.fn(), locale: "en" })),
+    getCurrentLocale: () => "en" | "fr",
+  }),
+}));
 
 // MSW integration
 
