@@ -20,7 +20,7 @@ export function StyleProvider(props: React.ComponentProps<typeof LedgerStyleProv
   return (
     <ThemeContext.Provider value={value}>
       <StyledComponentsRegistry>
-        <LedgerStyleProvider {...props} selectedPalette={theme} />;
+        <LedgerStyleProvider {...props} selectedPalette={value.theme} />;
       </StyledComponentsRegistry>
     </ThemeContext.Provider>
   );
