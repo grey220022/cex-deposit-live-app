@@ -1,3 +1,5 @@
+"use client";
+
 import { LocalesI18nConfig } from "@/i18n/config";
 import { createI18nClient } from "next-international/client";
 
@@ -7,18 +9,10 @@ import { createI18nClient } from "next-international/client";
 const I18nClient = createI18nClient(LocalesI18nConfig);
 
 /**
- * Component wrapper for client components that needs i18n.
+ * CLient component wrapper for the app.
  */
-export function withI18n<T extends { children?: React.ReactNode }>(
-  Component: React.ComponentType<T>,
-): React.ComponentType<T> {
-  return function i18n(props: React.PropsWithChildren<T>) {
-    return (
-      <I18nClient.I18nProviderClient>
-        <Component {...props} />
-      </I18nClient.I18nProviderClient>
-    );
-  };
+export function I18nProvider({ children }: { children?: React.ReactNode }) {
+  return <I18nClient.I18nProviderClient>{children}</I18nClient.I18nProviderClient>;
 }
 
 /**

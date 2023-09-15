@@ -14,7 +14,7 @@ The `config` file holds the necessary information regarding the supported locale
 
 ### Client
 
-The `client` file expose 2 elements made for client components. In first place it exports a `withI18n` wrapper that is to be used at the top level of your clients component. Last but not least it also exports a hook that handle the logic behind `i18n`. Once wrapped, you can call `useI18n` in your client components.
+The `client` file expose 2 elements made for client components. In first place it exports a `I18nProvider` wrapper that is to be used at the top level of our app, here in `app/[locale]/layout.tsx`. Last but not least it also exports a hook that handle the logic behind `i18n`. Once wrapped, you can call `useI18n` in your client components.
 
 > Note: One wrapper at the top level of your client components only.
 

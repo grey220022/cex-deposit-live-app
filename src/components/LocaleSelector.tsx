@@ -1,6 +1,6 @@
 "use client";
 
-import { withI18n, useI18n } from "@/i18n/client";
+import { useI18n } from "@/i18n/client";
 
 const LocaleSelector = () => {
   const { locale, changeLocale, t } = useI18n();
@@ -15,4 +15,4 @@ const LocaleSelector = () => {
   );
 };
 
-export default withI18n(LocaleSelector);
+export default LocaleSelector;
