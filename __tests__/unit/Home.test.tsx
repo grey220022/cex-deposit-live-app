@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import Home from "@/app/page";
+import Home from "@/app/[locale]/page";
 import { render, screen } from "@/TestTools";
 
 describe("Home", () => {
