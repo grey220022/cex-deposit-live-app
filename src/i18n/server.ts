@@ -1,4 +1,4 @@
-import { LocalesI18nConfig } from "@/i18n";
+import { LocalesI18nConfig } from "@/i18n/config";
 import { createI18nServer } from "next-international/server";
 
 /**
