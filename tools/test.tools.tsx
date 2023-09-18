@@ -6,6 +6,7 @@ import { PreloadedState } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { RootState, setupStore } from "@/redux/store";
 import { ToolkitStore } from "@reduxjs/toolkit/dist/configureStore";
+import { I18nProvider } from "@/i18n/client";
 
 // This type interface extends the default options for render from RTL, as well
 // as allows the user to specify other things such as initialState, store.
@@ -39,7 +40,7 @@ export function renderWithProviders(
     return (
       <Provider store={store}>
         <StyleProvider selectedPalette={theme} fontsPath="/fonts">
-          {children}
+          <I18nProvider>{children}</I18nProvider>
         </StyleProvider>
       </Provider>
     );

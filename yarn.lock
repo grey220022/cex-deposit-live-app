@@ -6333,11 +6333,6 @@ next-international@^1.0.0:
     server-only "^0.0.1"
 >>>>>>> c38d918 (Initilization of i18n)
 
-next-router-mock@^0.9.9:
-  version "0.9.9"
-  resolved "https://registry.yarnpkg.com/next-router-mock/-/next-router-mock-0.9.9.tgz#03191be49b1ede31d7475596fb0d86766d6a696f"
-  integrity sha512-2o50zr+5pWj0zzcvBEWNHDlmWmlDExPdX5OuXKW2aCxV85XUA6MlELr0n0f0wtXj5dUVZ8qspHj6YwF7KZHrbA==
-
 next@13.4.19:
   version "13.4.19"
   resolved "https://registry.yarnpkg.com/next/-/next-13.4.19.tgz#2326e02aeedee2c693d4f37b90e4f0ed6882b35f"
