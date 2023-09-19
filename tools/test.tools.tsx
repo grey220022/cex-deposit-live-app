@@ -1,12 +1,12 @@
-import React, { PropsWithChildren } from "react";
-import { render, RenderOptions } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { I18nProvider } from "@/i18n/client";
+import { RootState, setupStore } from "@/redux/store";
 import { StyleProvider } from "@/styles/provider";
 import { PreloadedState } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
-import { RootState, setupStore } from "@/redux/store";
 import { ToolkitStore } from "@reduxjs/toolkit/dist/configureStore";
-import { I18nProvider } from "@/i18n/client";
+import { RenderOptions, render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+import React, { PropsWithChildren } from "react";
+import { Provider } from "react-redux";
 
 // This type interface extends the default options for render from RTL, as well
 // as allows the user to specify other things such as initialState, store.

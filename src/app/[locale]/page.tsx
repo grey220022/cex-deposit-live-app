@@ -1,13 +1,14 @@
 "use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import ThemeSelector from "@/components/ThemeSelector";
 import { Storetester } from "@/components/StoreTester-to-remove";
 import LocaleSelector from "@/components/LocaleSelector";
-import { useI18n } from "@/i18n/server";
+import { useI18n } from "@/i18n/client";
 
-export default async function Home() {
-  const { t, locale } = await useI18n();
+export default function Home() {
+  const { t, locale } = useI18n();
 
   return (
     <main className={styles.main}>

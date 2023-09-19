@@ -9,7 +9,7 @@ import { createI18nClient } from "next-international/client";
 const I18nClient = createI18nClient(LocalesI18nConfig);
 
 /**
- * CLient component wrapper for the app.
+ * Client component wrapper for the app.
  */
 export function I18nProvider({ children }: { children?: React.ReactNode }) {
   return <I18nClient.I18nProviderClient>{children}</I18nClient.I18nProviderClient>;
