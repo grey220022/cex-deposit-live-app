@@ -26,14 +26,14 @@ beforeEach(() => {
   mockUseWalletInfo.mockReturnValue(mockUseWalletInfoData);
   mockUseUserId.mockReturnValue(mockUseUserIdData);
 });
-jest.mock("next/router", () => require("next-router-mock"));
 
-jest.mock("next-international", () => ({}));
-jest.mock("next-international/server", () => ({
-  createI18nServer: () => ({
-    getI18n: () => Promise.resolve(() => ({ t: () => jest.fn(), locale: "en" })),
-    getCurrentLocale: () => "en" | "fr",
-  }),
+/**
+ * @dev temporary fix due to https://github.com/QuiiBz/next-international/issues/178
+ * This code completely override anything related to i18n in our test.
+ */
+jest.mock("@/i18n/client", () => ({
+  I18nProvider: ({ children }) => <>{children}</>,
+  useI18n: () => ({ t: jest.fn(), changeLocale: jest.fn(), locale: "en" }),
 }));
 
 // MSW integration
