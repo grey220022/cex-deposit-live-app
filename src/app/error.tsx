@@ -1,5 +1,6 @@
 "use client"; // Error components must be Client Components
-import styles from "./page.module.css";
+
+import styles from "./error.module.css";
 
 type Props = { error: Error; reset: () => void };
 
