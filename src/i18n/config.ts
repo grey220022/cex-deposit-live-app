@@ -1,26 +1,19 @@
 /**
- * This is the only place new locale should be added.
+ * Add locales here.
  */
 export const LOCALES = ["en", "fr"] as const;
 
 /**
- * This is the Locale type.
+ * Default Locale.
  */
-export type Locale = (typeof LOCALES)[number];
+export const DEFAULT_LOCALE: Locale = "fr";
 
 /**
- * This is the File type.
- */
-export type File = () => Promise<unknown>;
-
-/**
- * This is the Locale definition type.
+ * Locale Definition.
  */
 export type LocaleDefinition = {
+  // Id
   id: Locale;
-
-  // Metadata
-  label: string;
 
   // File
   file: File;
@@ -32,12 +25,10 @@ export type LocaleDefinition = {
 export const Locales = {
   en: {
     id: "en",
-    label: "English",
     file: () => import("./locales/en.json"),
   },
   fr: {
     id: "fr",
-    label: "Français",
     file: () => import("./locales/fr.json"),
   },
 } as const satisfies LocaleMap<LocaleDefinition>;
@@ -45,17 +36,15 @@ export const Locales = {
 /**
  * Mapping from locales to their respective i18n files.
  */
-export const LocalesI18nConfig = {
-  en: () => Locales.en.file(),
-  fr: () => Locales.fr.file(),
-} as const satisfies LocaleMap<File>;
+export const LocalesI18nConfig = Object.values(LOCALES).reduce(
+  (acc, locale) => ({ ...acc, [locale]: Locales[locale].file }),
+  {} as LocaleMap<LocaleSchema>,
+);
 
 /**
- * The default locale.
+ * Utils type.
  */
-export const DEFAULT_LOCALE = Locales.en;
-
-/**
- * Utils types.
- */
+export type Locale = (typeof LOCALES)[number];
 export type LocaleMap<T = string> = { [key in Locale]: T };
+export type File = () => Promise<unknown>;
+export type LocaleSchema = (typeof Locales)[typeof DEFAULT_LOCALE]["file"];
