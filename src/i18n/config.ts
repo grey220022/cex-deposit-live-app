@@ -6,7 +6,7 @@ export const LOCALES = ["en", "fr"] as const;
 /**
  * Default Locale.
  */
-export const DEFAULT_LOCALE: Locale = "fr";
+export const DEFAULT_LOCALE: Locale = "en";
 
 /**
  * Locale Definition.
