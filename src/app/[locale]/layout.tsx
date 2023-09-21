@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import TransportProvider from "@/components/TransportProvider";
 import { StyleProvider } from "@/styles/provider";
 import { ReduxProvider } from "@/redux/provider";
+import { I18nProvider } from "@/i18n/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactElement 
       <body className={inter.className}>
         <ReduxProvider>
           <TransportProvider>
-            <StyleProvider>{children}</StyleProvider>
+            <StyleProvider>
+              <I18nProvider>{children}</I18nProvider>
+            </StyleProvider>
           </TransportProvider>
         </ReduxProvider>
       </body>
