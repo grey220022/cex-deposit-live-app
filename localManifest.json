@@ -1,10 +1,10 @@
 {
   "id": "ledger-cex-deposit",
-  "name": "Ledger Exchange Connect",
+  "name": "Babylon staking",
   "url": "http://localhost:3000/",
   "params": {},
-  "homepageUrl": "https://ledger.com/",
-  "icon": "https://refer-a-friend-frontend-stg.aws.stg.ldg-tech.com/referral-ll/assets/images/referral.png",
+  "homepageUrl": "https://babylonlabs.io/",
+  "icon": "https://img.cryptorank.io/coins/babylon1701677979121.png",
   "platform": "all",
   "apiVersion": "^2.0.0",
   "manifestVersion": "1",
